@@ -59,6 +59,9 @@ Sometimes running that command does not in turn run the
 ANT script
 `JSONAntlrAntMavenJastadd/src/main/jastadd/build.xml`,
 which will cause compilation errors.
+Specifically, if this ANT script did not execute,
+executing `maven compile` will generate an error message
+that includes the phrase "package AST does not exist".
 Running this ANT script generates source files required
 to perform the program analysis.
 To run this ANT script manually, either execute
