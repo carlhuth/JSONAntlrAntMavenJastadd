@@ -47,6 +47,20 @@ manually installed.
 2. [ANTLR 4 Eclipse plugin][antlr4_eclipse_plugin]
 
 
+ANTLR Maven Plugin Execution with Eclipse Troubleshooting Tip
+--------------------------------------------------------------
+For some users, the ANTLR 4 Maven Plugin did not execute in
+Eclipse without performing additional steps not listed on the
+ANTLR 4 Maven plugin [webpage][antlr4_maven_plugin].
+Specifically, the ANTLR 4 plugin caused Eclipse to print
+the following error message:
+`Plugin execution not covered by lifecycle configuration`.
+If that error message occurs, this
+this StackOverflow
+[webpage][plugin_execution_not_covered]
+discusses how to solve that problem.
+
+
 Building JSONAntlrAntMavenJastadd
 ------------------------------------
 Executing the following command should generate source
@@ -84,3 +98,5 @@ Right-clicking the default target -> `Run As` -> `Ant Build`.
 [jastadd_eclipse_plugin]: http://jastadd.org/update-site/eclipse-syntax
 [antlr4_eclipse_plugin]: https://github.com/jknack/antlr4ide
 [junit]: http://junit.org/
+[plugin_execution_not_covered]: http://stackoverflow.com/questions/6352208/how-to-solve-plugin-execution-not-covered-by-lifecycle-configuration-for-sprin
+
