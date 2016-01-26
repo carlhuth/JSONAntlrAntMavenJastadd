@@ -1,4 +1,6 @@
 // Derived from http://json.org
+// This file mostly copied from:
+// https://github.com/antlr/grammars-v4/blob/master/json/JSON.g4
 
 grammar JSON;
 
