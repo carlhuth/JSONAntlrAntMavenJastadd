@@ -95,17 +95,17 @@ steps:
 1. Execute the ANT build script `build.xml` in directory
 `JSONAntlrAntMavenJastadd/src/main/jastadd`.
 This script can be executed two different ways:
-  a. From the Eclipse window by,
+    1. From the Eclipse window by,
      Right-clicking the default target -> `Run As` -> `Ant Build`.
-  b. From the command line,
+    2. From the command line,
      execute `ant` from `JSONAntlrAntMavenJastadd/src/main/jastadd`.
 2. Run the Maven build script `pom.xml` from directory `JSONAntlrAntMavenJastadd`
    with the Maven goal `compile`.
    This script can be done two different ways:
-  a. From the Eclipse window by,
-     Right-clicking the Project Directory -> `Maven Build` ->
+    1. From the Eclipse window by,
+     Right-clicking the Project Directory -> `Run As` -> `Maven Build` ->
      Enter goal `compile` in the `Goals:` textbox of the pop-up window.
-  b. From the command line,
+    2. From the command line,
      execute `mvn compile` from `JSONAntlrAntMavenJastadd`.
 3. Right-clicking the Project Directory -> `Refresh`
 
@@ -132,6 +132,17 @@ To run this ANT script manually, either execute `ant` from
 or execute this script from the Eclipse window by
 Right-clicking the default target -> `Run As` -> `Ant Build`.
 
+
+Running Sample Application using JSONAntlrAntMavenJastadd
+----------------------------------------------------------
+[JUnit][junit] tests that utilize the `JSONAntlrAntMavenJastadd`
+are in file
+`JSONAntlrAntMavenJastadd/src/test/java/parser/TestJSONParser.java`.
+To execute the JUnit tests in that file from Eclipse:
+in the Package Explorer,
+Right-click the file -> `Run As` -> `JUnit Test`.
+
+
 [json]: http://www.json.org/
 [eclipse]: http://www.eclipse.org/
 [antlr4]: https://github.com/antlr/antlr4/blob/master/doc/index.md
@@ -149,3 +160,4 @@ Right-clicking the default target -> `Run As` -> `Ant Build`.
 [plugin_execution_not_covered]: http://stackoverflow.com/questions/6352208/how-to-solve-plugin-execution-not-covered-by-lifecycle-configuration-for-sprin
 [xtext]: https://eclipse.org/Xtext/
 [xtext_download_page]: http://www.eclipse.org/downloads/download.php?file=/modeling/tmf/xtext/downloads/drops/2.7.3/R201411190455/tmf-xtext-Update-2.7.3.zip
+
