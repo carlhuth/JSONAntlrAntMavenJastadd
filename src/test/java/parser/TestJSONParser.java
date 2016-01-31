@@ -33,7 +33,7 @@ public class TestJSONParser
         
         ASTFactory factory = new ASTFactory();
         JsonProgram p = (JsonProgram) tree.accept(factory);
-        int numStringLiterals = p.numStringLiterals() ;
+        int numStringLiterals = p.numStringValues() ;
         System.out.println("Number of string literals: "
           + numStringLiterals);
         assertTrue(numStringLiterals > 0);
@@ -59,8 +59,8 @@ public class TestJSONParser
         
         ASTFactory factory = new ASTFactory();
         JsonProgram p = (JsonProgram) tree.accept(factory);
-        int numStringLiterals = p.numStringLiterals() ;
-        System.out.println("Number of string literals: "
+        int numStringLiterals = p.numStringValues() ;
+        System.out.println("Number of string values: "
           + numStringLiterals);
         assertTrue(numStringLiterals > 0);
 	}

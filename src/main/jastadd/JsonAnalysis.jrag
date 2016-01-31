@@ -4,31 +4,31 @@
 import java.util.*;
 aspect JsonAnalysis
 {
-  syn int JsonProgram.numStringLiterals() =
-  	getJson().numStringLiterals();
+  syn int JsonProgram.numStringValues() =
+  	getJson().numStringValues();
 
-  syn int Json.numStringLiterals();
+  syn int Json.numStringValues();
   
-  eq JObject.numStringLiterals() {
+  eq JObject.numStringValues() {
   	int total = 0;
   	for(Pair p : getPairList()) {
-  		total += p.numStringLiterals();
+  		total += p.numStringValues();
   	}
   	return total;
   }
   
-  syn int Pair.numStringLiterals() =
-  	getValue().numStringLiterals();
+  syn int Pair.numStringValues() =
+  	getValue().numStringValues();
   
-  eq JArray.numStringLiterals() {
+  eq JArray.numStringValues() {
   	int total = 0 ;
   	for(Value v : getValueList()) {
-  		total += v.numStringLiterals();
+  		total += v.numStringValues();
   	}
   	return total;
   }
   
-  syn int Value.numStringLiterals() = 0;
+  syn int Value.numStringValues() = 0;
   
-  eq JString.numStringLiterals() = 1 ;
+  eq JString.numStringValues() = 1 ;
 }
